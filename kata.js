@@ -1,55 +1,55 @@
-function zero() {
-  return 0 ;
+function zero(operation) {
+  return operation? operation(0):0;
 }
-function one() {
-  return 1 ;
+function one(operation) {
+  return operation? operation(1):1 ;
 }
-function two() {
-  return 2 ;
+function two(operation) {
+  return operation? operation(2):2;
 }
-function three() {
-  return 3 ;
+function three(operation) {
+  return operation? operation(3):3 ;
 }
-function four() {
-  return 4 ;
+function four(operation) {
+  return operation? operation(4):4 ;
 }
-function five() {
-  return 5 ;
+function five(operation) {
+  return operation? operation(5):5 ;
 }
-function six() {
-  return 6 ;
+function six(operation) {
+  return operation? operation(6):6 ;
 }
-function seven() {
-  return 7 ;
+function seven(operation) {
+  return operation? operation(7):7 ;
 }
-function eight() {
-  return 8 ;
+function eight(operation) {
+  return operation? operation(8):8 ;
 }
-function nine() {
-  return 9 ;
+function nine(operation) {
+  return operation? operation(9):9 ;
 }
 
 function plus(x) {
   return function (y){
-    return x+y;
+    return y+x;
   }
 }
 function minus(x) {
   return function (y){
-    return x-y;
+    return y-x;
   }
 }
 
 function times(x) {
   return function (y){
-    return x*y;
+    return y*x;
   }
 }
 
 function dividedBy(x) {
   return function (y){
-    return Math.floor(x/y);
+    return Math.floor(y/x);
   }
 }
 
-console.log(zero(plus(two())))
+console.log(two(dividedBy(one())))
