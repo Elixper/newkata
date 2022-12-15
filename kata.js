@@ -53,3 +53,11 @@ function dividedBy(x) {
 }
 
 console.log(two(dividedBy(one())))
+
+
+var names = ['Lea', 'John', 'Rachel', 'Yehuda'];
+(function(){
+    for(name in names){
+        console.log(name);
+    }
+})();
